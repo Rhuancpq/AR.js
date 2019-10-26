@@ -140,6 +140,7 @@ var Qb=[Ik,Zh,_h,Qj,Qi,Pi,Ri,Ag,sg,qg,rg,yg,kh,jh,Oi,Mj];var Rb=[Jk,ki,ji,gi];va
 
 		var markerNum = this.getMarkerNum();
 		var k,o;
+		console.log(this.patternMarkers);
 		for (k in this.patternMarkers) {
 			o = this.patternMarkers[k]
 			o.inPrevious = o.inCurrent;
@@ -155,7 +156,6 @@ var Qb=[Ik,Zh,_h,Qj,Qi,Pi,Ri,Ag,sg,qg,rg,yg,kh,jh,Oi,Mj];var Rb=[Jk,ki,ji,gi];va
 			var markerInfo = this.getMarker(i);
 			var markerType = artoolkit.UNKNOWN_MARKER;
 			var visible = this.trackPatternMarkerId(-1);
-            console.log(visible);
 			if (markerInfo.idPatt > -1 && (markerInfo.id === markerInfo.idPatt || markerInfo.idMatrix === -1)) {
 				visible = this.trackPatternMarkerId(markerInfo.idPatt);
 				markerType = artoolkit.PATTERN_MARKER;
